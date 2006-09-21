@@ -1,0 +1,20 @@
+ ---
+ Introduction
+ ---
+ Stephen Duncan Jr
+ ---
+
+XPath Replacement Plugin
+
+  The xpath replacement plugin is intended to be used similarly to filtering in the resources plugin.
+  It replaces matches of an xpath expression with a provided value in a single file.
+
+* Goals Overview
+
+  There is currently only one goal available:
+
+  * {{{process-file-mojo.html}xpathreplacement:process-file}} replaces matches in a single file.
+
+* Usage
+
+  Instructions on how to use the Plugin Name can be found {{{usage.html}here}}.

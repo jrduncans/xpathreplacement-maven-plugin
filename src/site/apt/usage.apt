@@ -1,0 +1,96 @@
+ ---
+  Introduction
+ ---
+ Stephen Duncan Jr
+ ---
+ 
+Usage
+ 
+ There are two modes the xpathreplacement plugin can be used in.  By default it ignores namespaces.
+ If you provide configuration for <<<namespaceMappings>>> then the plugin will be namespace aware
+ and use the prefix to namespace mapping you provide to match your xpath expression.
+ 
+*Using without namespaces
+
+**Sample xml file
+
++---+
+<country>
+	<state>
+		<county>
+			<city>Norfolk</city>
+		</county>
+	</state>
+</country>
++---+
+
+** Sample pom configuration
+
++---+
+<plugin>
+	<groupId>com.stephenduncanjr</groupId>
+	<artifactId>xpathreplacement-maven-plugin</artifactId>
+	<executions>
+		<execution>
+			<id>execute</id>
+			
+			<goals>
+				<goal>process-file</goal>
+			</goals>
+			
+			<configuration>
+				<inputFile>src/main/resources/test.xml</inputFile>
+				
+				<xpath>/country/state/county/city/text()</xpath>
+				
+				<value>Chesapeake</value>
+			</configuration>
+		</execution>
+	</executions>
+</plugin>
++---+ 
+ 
+*Using with namespaces
+
+**Sample xml file
+
++---+
+<country xmlns="http://example.com">
+	<state>
+		<county>
+			<city>Norfolk</city>
+		</county>
+	</state>
+</country>
++---+
+
+** Sample pom configuration
+
++---+
+<plugin>
+	<groupId>com.stephenduncanjr</groupId>
+	<artifactId>xpathreplacement-maven-plugin</artifactId>
+	<executions>
+		<execution>
+			<id>execute</id>
+			
+			<goals>
+				<goal>process-file</goal>
+			</goals>
+			
+			<configuration>
+				<inputFile>src/main/resources/test.xml</inputFile>
+				
+				<namespaceMappings>
+				    <namespaceMapping>yourvalue</namespaceMapping>
+					<p>http://example.com</p>
+				</namespaceMappings>
+				
+				<xpath>/p:country/p:state/p:county/p:city/text()</xpath>
+				
+				<value>Chesapeake</value>
+			</configuration>
+		</execution>
+	</executions>
+</plugin>
++---+

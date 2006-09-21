@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="${project.name}">
+	<body>
+		<links>
+			<item name="Stephen Duncan Jr" href="http://www.stephenduncanjr.com/" />
+			<item name="Google Code Site" href="http://code.google.com/p/jrduncans/" />
+		</links>
+
+		<menu name="Overview">
+			<item name="Introduction" href="index.html" />
+			<item name="Usage" href="usage.html" />
+		</menu>
+		
+		${reports}
+	</body>
+</project>
