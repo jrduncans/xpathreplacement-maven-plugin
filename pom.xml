@@ -18,7 +18,7 @@
 
 	<description>Maven plugin to replace content in an XML file using XPath.</description>
 	
-	<url>http://code.google.com/p/jrduncans/</url>
+	<url>http://www.stephenduncanjr.com/projects/xpathreplacement-maven-plugin/index.html</url>
 	
 	<issueManagement>
 		<system>Google Code Hosting</system>
