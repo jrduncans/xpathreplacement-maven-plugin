@@ -99,7 +99,6 @@ Usage
 				<inputFile>src/main/resources/test.xml</inputFile>
 				
 				<namespaceMappings>
-				    <namespaceMapping>yourvalue</namespaceMapping>
 					<p>http://example.com</p>
 				</namespaceMappings>
 				
