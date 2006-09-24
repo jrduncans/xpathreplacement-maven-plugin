@@ -74,10 +74,6 @@
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>findbugs-maven-plugin</artifactId>
-				
-				<configuration>
-					<threshold>High|Normal|Low|Exp|Ignore</threshold>
-				</configuration>
 			</plugin>
 			
 			<plugin>
